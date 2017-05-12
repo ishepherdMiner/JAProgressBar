@@ -82,6 +82,9 @@
     dispatch_async(dispatch_get_main_queue(), ^{
         double newKey = [[change objectForKey:NSKeyValueChangeNewKey] doubleValue];        
         [self.progressBarlayer flush:newKey];
+        if (1 - newKey < 0.01) {
+            [self finish];
+        }
     });
 }
 
