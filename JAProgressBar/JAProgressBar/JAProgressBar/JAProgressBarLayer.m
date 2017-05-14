@@ -42,4 +42,12 @@ NSString *JAkEstimatedProgress = @"estimatedProgress";
             [self removeFromSuperlayer];
     });
 }
+
+- (void)fail {
+    self.strokeEnd = 0.0;
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        self.hidden = true;
+        [self removeFromSuperlayer];
+    });
+}
 @end

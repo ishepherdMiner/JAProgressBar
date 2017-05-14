@@ -42,7 +42,7 @@
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
     NSLog(@"加载失败");
-    [_webView finish];
+    [_webView fail];
 }
 
 - (void)didReceiveMemoryWarning {

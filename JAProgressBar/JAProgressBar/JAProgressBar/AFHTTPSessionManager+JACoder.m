@@ -7,10 +7,8 @@
 //
 
 #import "AFHTTPSessionManager+JACoder.h"
+#import "JAProgressUIWebView.h"
 #import <objc/message.h>
-
-NSString *kAFJAReceiveDataNotification =  @"kAFNReceiveDataNotification";
-NSString *kAFJAReceiveResponseNotification = @"kAFJAReceiveResponseNotification";
 
 @implementation AFHTTPSessionManager (JACoder)
 

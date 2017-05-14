@@ -22,6 +22,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)finish;
 - (void)flush:(CGFloat)progress;
+- (void)fail;
 
 @end
 

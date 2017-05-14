@@ -17,6 +17,7 @@ UIKIT_EXTERN NSString *JAkEstimatedProgress;
 
 - (void)flush:(CGFloat)progress;
 - (void)finish;
+- (void)fail;
 
 @end
 

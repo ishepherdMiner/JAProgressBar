@@ -6,7 +6,7 @@
 //  Copyright © 2017 Jason. All rights reserved.
 //
 
-#import <AFNetworking.h>
+#import "AFNetworking.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -15,8 +15,5 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,assign,getter=isLock) BOOL lock;
 
 @end
-
-UIKIT_EXTERN NSString *kAFJAReceiveDataNotification;       /// 接收到数据
-UIKIT_EXTERN NSString *kAFJAReceiveResponseNotification;   /// 数据接收完成
 
 NS_ASSUME_NONNULL_END

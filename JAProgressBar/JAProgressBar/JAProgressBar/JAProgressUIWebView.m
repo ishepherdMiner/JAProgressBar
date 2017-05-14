@@ -7,10 +7,10 @@
 //
 
 #import "JAProgressUIWebView.h"
-#import "AFNetworking.h"
-#import "UIKit+AFNetworking.h"
-#import "AFHTTPSessionManager+JACoder.h"
 #import "JAProgressView.h"
+
+NSString *kAFJAReceiveDataNotification =  @"kAFNReceiveDataNotification";
+NSString *kAFJAReceiveResponseNotification = @"kAFJAReceiveResponseNotification";
 
 @interface JAProgressUIWebView ()
 
@@ -100,6 +100,10 @@
 
 - (void)finish {
     [self.progressBarlayer finish];
+}
+
+- (void)fail {
+    [self.progressBarlayer fail];
 }
 
 - (NSArray *)records {

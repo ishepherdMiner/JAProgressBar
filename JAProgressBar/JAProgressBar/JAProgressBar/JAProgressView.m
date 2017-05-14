@@ -51,6 +51,10 @@ NSString *JAEstimatedProgressNotification = @"estimatedProgressNotification";
     [self.progressBarlayer finish];
 }
 
+- (void)fail {
+    [self.progressBarlayer fail];
+}
+
 @end
 
 

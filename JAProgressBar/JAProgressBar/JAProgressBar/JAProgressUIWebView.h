@@ -22,7 +22,11 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)finish;
 - (void)flush:(CGFloat)progress;
+- (void)fail;
 
 @end
+
+UIKIT_EXTERN NSString *kAFJAReceiveDataNotification;       /// 接收到数据
+UIKIT_EXTERN NSString *kAFJAReceiveResponseNotification;   /// 数据接收完成
 
 NS_ASSUME_NONNULL_END

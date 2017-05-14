@@ -27,6 +27,7 @@
     _webView.delegate = self;
     
     [self.view addSubview:_webView];
+    [self.navigationController.navigationBar addSubview:_webView.progressView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
@@ -47,7 +48,7 @@
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [_webView finish];
+    [_webView fail];
 }
 
 - (void)didReceiveMemoryWarning {

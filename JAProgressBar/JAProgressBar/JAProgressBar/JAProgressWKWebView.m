@@ -52,6 +52,10 @@
     [self.progressBarlayer finish];
 }
 
+- (void)fail {
+    [self.progressBarlayer fail];
+}
+
 - (void)dealloc {
     @try {
         [self removeObserver:self forKeyPath:JAkEstimatedProgress];
