@@ -40,6 +40,9 @@
     } failure:^(NSError * _Nonnull error) {
         
     }];
+    
+    //
+    _webView.sessionDataDelegate = _webView.sessionManager;
 }
 
 #pragma mark - UIWebViewDelegate

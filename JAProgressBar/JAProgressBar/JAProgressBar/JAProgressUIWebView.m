@@ -8,6 +8,7 @@
 
 #import "JAProgressUIWebView.h"
 #import "JAProgressView.h"
+#import <objc/message.h>
 
 NSString *kAFJAReceiveDataNotification =  @"kAFNReceiveDataNotification";
 NSString *kAFJAReceiveResponseNotification = @"kAFJAReceiveResponseNotification";
@@ -20,6 +21,9 @@ NSString *kAFJAReceiveResponseNotification = @"kAFJAReceiveResponseNotification"
 
 @property (nonatomic,strong) NSArray *records;
 @property (nonatomic,assign) CGFloat estimatedProgress;
+
+@property (nonatomic,assign) IMP imp;
+
 @end
 
 @implementation JAProgressUIWebView
@@ -38,6 +42,148 @@ NSString *kAFJAReceiveResponseNotification = @"kAFJAReceiveResponseNotification"
         [self.progressView.layer addSublayer:self.progressBarlayer];
     }
 }
+
+// ------------------------------- Begin ----------------------------------------------------
+/*
+ 分类的实现方式
+ AFHTTPSessionManager+JACoder.h
+ 
+ NS_ASSUME_NONNULL_BEGIN
+ 
+ @interface AFHTTPSessionManager (JACoder)
+ 
+ @property (nonatomic,assign,getter=isLock) BOOL lock;
+ 
+ @end
+ 
+ NS_ASSUME_NONNULL_END
+ */
+
+/*
+ AFHTTPSessionManager+JACoder.m
+ 
+ @implementation AFHTTPSessionManager (JACoder)
+ 
+ + (void)load {
+    Method originalMethod = class_getInstanceMethod(self, @selector(URLSession:dataTask:didReceiveData:));
+    Method swizzledMethod = class_getInstanceMethod(self, @selector(ja_URLSession:dataTask:didReceiveData:));
+    BOOL didAddMethod =
+        class_addMethod(self,
+        @selector(URLSession:dataTask:didReceiveData:),
+        method_getImplementation(swizzledMethod),
+        method_getTypeEncoding(swizzledMethod));
+ 
+    if (didAddMethod) {
+        class_replaceMethod(self,
+        @selector(ja_URLSession:dataTask:didReceiveData:),
+        method_getImplementation(originalMethod),
+        method_getTypeEncoding(originalMethod));
+    } else {
+        method_exchangeImplementations(originalMethod, swizzledMethod);
+    }
+ }
+ 
+ - (void)ja_URLSession:(NSURLSession *)session
+              dataTask:(NSURLSessionDataTask *)dataTask
+        didReceiveData:(NSData *)data {
+ 
+    [self ja_URLSession:session dataTask:dataTask didReceiveData:data];
+ 
+    // ...
+    if (dataTask.response.expectedContentLength != -1 && self.isLock == false) {
+        //        NSLog(@"data = %ld",data.length);
+        //        NSLog(@"dataTask = %lld",dataTask.response.expectedContentLength);
+        [[NSNotificationCenter defaultCenter] postNotificationName:kAFJAReceiveDataNotification object:data];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kAFJAReceiveResponseNotification object:dataTask];
+ 
+        self.lock = true;
+ 
+    }else {
+ 
+        // NSLog(@"data = %ld",data.length);
+        [[NSNotificationCenter defaultCenter] postNotificationName:kAFJAReceiveDataNotification object:data];
+    }
+ }
+ 
+ - (BOOL)isLock {
+    return (BOOL)[objc_getAssociatedObject(self, @selector(isLock)) doubleValue];
+ }
+ 
+ - (void)setLock:(BOOL)lock {
+    objc_setAssociatedObject(self, @selector(setLock:), @(lock), OBJC_ASSOCIATION_ASSIGN);
+ }
+ 
+ @end
+ 
+ */
+- (void)setSessionDataDelegate:(id<NSURLSessionDataDelegate>)sessionDataDelegate {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        if (sessionDataDelegate) {
+            _sessionDataDelegate = sessionDataDelegate;
+            id delegate = (id)sessionDataDelegate;
+            Method originalMethod = class_getInstanceMethod([delegate class], @selector(URLSession:dataTask:didReceiveData:));
+            Method swizzledMethod = class_getInstanceMethod([self class], @selector(ja_URLSession:dataTask:didReceiveData:));
+
+#warning Keep attention
+            // 替换 id<NSURLSessionDataDelegate> 对象的类中的 ``URLSession:dataTask:didReceiveData:`` 方法的实现
+            // 整段代码相当于给 id<NSURLSessionDataDelegate> 对象的类添加一个新方法 ``ja_URLSession:dataTask:didReceiveData:，
+            // 然后用新添加的方法与原方法的实现进行交换操作
+            // 一般在 +load 中实现 swizzing 方法交换，但是不想使用分类 AFHTTPSessionManager+JACoder
+            // 因为有分类时，托管给 cocoaPods 编译成 lib 时，即使选择了依赖 AFN 还是会遇到类似命名空间的问题。
+            // 水平有限，目前想不出其他方式，暂时不确定会有什么影响
+            BOOL didAddMethod =
+            class_addMethod([delegate class],
+                            @selector(URLSession:dataTask:didReceiveData:),
+                            method_getImplementation(swizzledMethod),
+                            method_getTypeEncoding(swizzledMethod));
+            
+            Method setLockMethod = class_getInstanceMethod([self class], @selector(setLock:));
+            class_addMethod([delegate class], @selector(setLock:), method_getImplementation(setLockMethod),method_getTypeEncoding(setLockMethod));
+            
+            Method isLockMethod = class_getInstanceMethod([self class], @selector(isLock));
+            class_addMethod([delegate class], @selector(isLock), method_getImplementation(isLockMethod), method_getTypeEncoding(isLockMethod));
+            
+            if (didAddMethod) {
+                class_replaceMethod([delegate class],
+                                    @selector(ja_URLSession:dataTask:didReceiveData:),
+                                    method_getImplementation(originalMethod),
+                                    method_getTypeEncoding(originalMethod));
+            } else {
+                method_exchangeImplementations(originalMethod, swizzledMethod);
+            }
+        }
+    });
+}
+
+- (void)ja_URLSession:(__unused NSURLSession *)session
+             dataTask:(__unused NSURLSessionDataTask *)dataTask
+       didReceiveData:(NSData *)data  {
+    
+    // 这里的 self 是 id<NSURLSessionDataDelegate> 对象
+    [self ja_URLSession:session dataTask:dataTask didReceiveData:data];
+    
+    if (dataTask.response.expectedContentLength != -1 && self.isLock == false) {
+        [[NSNotificationCenter defaultCenter] postNotificationName:kAFJAReceiveDataNotification object:data];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kAFJAReceiveResponseNotification object:dataTask];
+        
+        self.lock = true;
+        
+    }else {
+                
+        [[NSNotificationCenter defaultCenter] postNotificationName:kAFJAReceiveDataNotification object:data];
+    }
+}
+
+- (BOOL)isLock {
+    return (BOOL)[objc_getAssociatedObject(self, @selector(setLock:)) doubleValue];
+}
+
+- (void)setLock:(BOOL)lock {
+    objc_setAssociatedObject(self, @selector(setLock:), @(lock), OBJC_ASSOCIATION_ASSIGN);
+}
+
+// ------------------------------- End ----------------------------------------------------
 
 - (void)receiveWithNotification:(NSNotification *)noti {
     if ([noti.object isKindOfClass:[NSURLSessionDataTask class]]) {

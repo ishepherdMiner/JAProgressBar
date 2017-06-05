@@ -17,7 +17,6 @@ NS_ASSUME_NONNULL_BEGIN
 
 @property (nonatomic,strong,readonly) JAProgressBarLayer *progressBarlayer;
 
-
 - (void)flush:(CGFloat)progress;
 - (void)finish;
 - (void)fail;

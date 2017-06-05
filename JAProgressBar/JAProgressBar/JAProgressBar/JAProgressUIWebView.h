@@ -20,6 +20,17 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic,strong,readonly) JAProgressView *progressView;
 @property (nonatomic,strong,readonly) JAProgressBarLayer *progressBarlayer;
 
+/**
+ * 运行时替换该代理对象的 ``URLSession:dataTask:didReceiveData:`` 方法实现监听网络请求进度
+ * AFN中有 
+ *
+ * \@interface AFURLSessionManager : NSObject <NSURLSessionDelegate, NSURLSessionTaskDelegate, NSURLSessionDataDelegate, NSURLSessionDownloadDelegate, NSSecureCoding, NSCopying>
+ * 只要拿到 manager 对象赋值即可
+ *
+ */
+@property (nonatomic,strong) id<NSURLSessionDataDelegate> sessionDataDelegate;
+@property (nonatomic,assign,getter=isLock) BOOL lock;
+
 - (void)finish;
 - (void)flush:(CGFloat)progress;
 - (void)fail;

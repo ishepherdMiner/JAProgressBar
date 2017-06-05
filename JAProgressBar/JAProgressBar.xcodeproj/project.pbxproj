@@ -13,7 +13,6 @@
 		96996A9C1EC5252C00878D8B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96996A9A1EC5252C00878D8B /* Main.storyboard */; };
 		96996A9E1EC5252C00878D8B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 96996A9D1EC5252C00878D8B /* Assets.xcassets */; };
 		96996AA11EC5252C00878D8B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 96996A9F1EC5252C00878D8B /* LaunchScreen.storyboard */; };
-		96996AC31EC52C3E00878D8B /* AFHTTPSessionManager+JACoder.m in Sources */ = {isa = PBXBuildFile; fileRef = 96996ABA1EC52C3E00878D8B /* AFHTTPSessionManager+JACoder.m */; };
 		96996AC41EC52C3E00878D8B /* JAProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96996ABC1EC52C3E00878D8B /* JAProgressBarLayer.m */; };
 		96996AC51EC52C3E00878D8B /* JAProgressUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96996ABE1EC52C3E00878D8B /* JAProgressUIWebView.m */; };
 		96996AC61EC52C3E00878D8B /* JAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96996AC01EC52C3E00878D8B /* JAProgressView.m */; };
@@ -36,8 +35,6 @@
 		96996A9D1EC5252C00878D8B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		96996AA01EC5252C00878D8B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		96996AA21EC5252C00878D8B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		96996AB91EC52C3E00878D8B /* AFHTTPSessionManager+JACoder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "AFHTTPSessionManager+JACoder.h"; sourceTree = "<group>"; };
-		96996ABA1EC52C3E00878D8B /* AFHTTPSessionManager+JACoder.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "AFHTTPSessionManager+JACoder.m"; sourceTree = "<group>"; };
 		96996ABB1EC52C3E00878D8B /* JAProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAProgressBarLayer.h; sourceTree = "<group>"; };
 		96996ABC1EC52C3E00878D8B /* JAProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAProgressBarLayer.m; sourceTree = "<group>"; };
 		96996ABD1EC52C3E00878D8B /* JAProgressUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAProgressUIWebView.h; sourceTree = "<group>"; };
@@ -125,8 +122,6 @@
 		96996AB81EC52C3E00878D8B /* JAProgressBar */ = {
 			isa = PBXGroup;
 			children = (
-				96996AB91EC52C3E00878D8B /* AFHTTPSessionManager+JACoder.h */,
-				96996ABA1EC52C3E00878D8B /* AFHTTPSessionManager+JACoder.m */,
 				96996ABB1EC52C3E00878D8B /* JAProgressBarLayer.h */,
 				96996ABC1EC52C3E00878D8B /* JAProgressBarLayer.m */,
 				96996ABD1EC52C3E00878D8B /* JAProgressUIWebView.h */,
@@ -305,7 +300,6 @@
 				96996AD31EC52F0F00878D8B /* JAUIViewController.m in Sources */,
 				96996AC71EC52C3E00878D8B /* JAProgressWKWebView.m in Sources */,
 				96996AD01EC52EE100878D8B /* JAWKViewController.m in Sources */,
-				96996AC31EC52C3E00878D8B /* AFHTTPSessionManager+JACoder.m in Sources */,
 				96996A931EC5252C00878D8B /* main.m in Sources */,
 				96996AC41EC52C3E00878D8B /* JAProgressBarLayer.m in Sources */,
 				96996AC51EC52C3E00878D8B /* JAProgressUIWebView.m in Sources */,
