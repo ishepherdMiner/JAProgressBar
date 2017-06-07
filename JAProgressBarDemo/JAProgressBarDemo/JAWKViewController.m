@@ -7,7 +7,7 @@
 //
 
 #import "JAWKViewController.h"
-#import "JAProgressView.h"
+#import <JAProgressBar.h>
 
 @interface JAWKViewController () <WKNavigationDelegate>
 
@@ -23,7 +23,8 @@
     self.automaticallyAdjustsScrollViewInsets = false;
     WKWebViewConfiguration *theConfiguration = [[WKWebViewConfiguration alloc] init];
     JAProgressWKWebView *webView = [[JAProgressWKWebView alloc] initWithFrame:CGRectMake(0, 64, [UIScreen mainScreen].bounds.size.width, [UIScreen mainScreen].bounds.size.height - 64) configuration:theConfiguration];
-    webView.tintColor = [UIColor groupTableViewBackgroundColor];
+    webView.backgroundColor = [UIColor groupTableViewBackgroundColor];
+    webView.opaque = false;
     webView.navigationDelegate = self;
     [self.view addSubview:_webView = webView];
     [self.navigationController.navigationBar addSubview:webView.progressView];
@@ -42,7 +43,7 @@
 
 - (void)webView:(WKWebView *)webView didFailNavigation:(WKNavigation *)navigation withError:(NSError *)error {
     NSLog(@"加载失败");
-    [_webView fail];
+    [_webView finish];
 }
 
 - (void)didReceiveMemoryWarning {

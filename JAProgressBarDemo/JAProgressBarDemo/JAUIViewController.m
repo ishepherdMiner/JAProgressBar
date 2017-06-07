@@ -7,8 +7,8 @@
 //
 
 #import "JAUIViewController.h"
-#import <AFNetworking.h>
-#import "JAProgressView.h"
+#import "AFNetworking.h"
+#import <JAProgressBar.h>
 
 @interface JAUIViewController ()
 

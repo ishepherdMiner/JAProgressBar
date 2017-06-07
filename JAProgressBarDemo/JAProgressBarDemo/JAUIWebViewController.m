@@ -7,8 +7,8 @@
 //
 
 #import "JAUIWebViewController.h"
-#import "JAProgressView.h"
-#import <UIKit+AFNetworking.h>
+#import <JAProgressBar.h>
+#import "UIKit+AFNetworking.h"
 
 @interface JAUIWebViewController () <UIWebViewDelegate>
 
@@ -41,7 +41,6 @@
         
     }];
     
-    //
     _webView.sessionDataDelegate = _webView.sessionManager;
 }
 
@@ -51,7 +50,7 @@
 }
 
 - (void)webView:(UIWebView *)webView didFailLoadWithError:(NSError *)error {
-    [_webView fail];
+    [_webView finish];
 }
 
 - (void)didReceiveMemoryWarning {

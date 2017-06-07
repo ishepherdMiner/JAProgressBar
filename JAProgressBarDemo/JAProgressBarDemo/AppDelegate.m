@@ -1,8 +1,8 @@
 //
 //  AppDelegate.m
-//  JAProgressBar
+//  JAProgressBarDemo
 //
-//  Created by Jason on 12/05/2017.
+//  Created by Jason on 14/05/2017.
 //  Copyright © 2017 Jason. All rights reserved.
 //
 

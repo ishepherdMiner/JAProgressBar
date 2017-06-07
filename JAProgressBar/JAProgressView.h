@@ -8,8 +8,6 @@
 
 #import <UIKit/UIKit.h>
 #import "JAProgressBarLayer.h"
-#import "JAProgressUIWebView.h"
-#import "JAProgressWKWebView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 

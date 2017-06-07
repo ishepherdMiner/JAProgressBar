@@ -1,0 +1,348 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		96166A711EE820ED00A6B45B /* JAProgressBarLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A691EE820ED00A6B45B /* JAProgressBarLayer.h */; };
+		96166A721EE820ED00A6B45B /* JAProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96166A6A1EE820ED00A6B45B /* JAProgressBarLayer.m */; };
+		96166A731EE820ED00A6B45B /* JAProgressUIWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6B1EE820ED00A6B45B /* JAProgressUIWebView.h */; };
+		96166A741EE820ED00A6B45B /* JAProgressUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96166A6C1EE820ED00A6B45B /* JAProgressUIWebView.m */; };
+		96166A751EE820ED00A6B45B /* JAProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6D1EE820ED00A6B45B /* JAProgressView.h */; };
+		96166A761EE820ED00A6B45B /* JAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96166A6E1EE820ED00A6B45B /* JAProgressView.m */; };
+		96166A771EE820ED00A6B45B /* JAProgressWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6F1EE820ED00A6B45B /* JAProgressWKWebView.h */; };
+		96166A781EE820ED00A6B45B /* JAProgressWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96166A701EE820ED00A6B45B /* JAProgressWKWebView.m */; };
+		96D0EFEF1EC82B61002A8A17 /* JAProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 96D0EFED1EC82B61002A8A17 /* JAProgressBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96D0EFF71EC82C12002A8A17 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 96D0EFF61EC82C12002A8A17 /* Info.plist */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		96166A691EE820ED00A6B45B /* JAProgressBarLayer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAProgressBarLayer.h; sourceTree = "<group>"; };
+		96166A6A1EE820ED00A6B45B /* JAProgressBarLayer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAProgressBarLayer.m; sourceTree = "<group>"; };
+		96166A6B1EE820ED00A6B45B /* JAProgressUIWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAProgressUIWebView.h; sourceTree = "<group>"; };
+		96166A6C1EE820ED00A6B45B /* JAProgressUIWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAProgressUIWebView.m; sourceTree = "<group>"; };
+		96166A6D1EE820ED00A6B45B /* JAProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAProgressView.h; sourceTree = "<group>"; };
+		96166A6E1EE820ED00A6B45B /* JAProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAProgressView.m; sourceTree = "<group>"; };
+		96166A6F1EE820ED00A6B45B /* JAProgressWKWebView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JAProgressWKWebView.h; sourceTree = "<group>"; };
+		96166A701EE820ED00A6B45B /* JAProgressWKWebView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = JAProgressWKWebView.m; sourceTree = "<group>"; };
+		96D0EFEA1EC82B61002A8A17 /* JAProgressBar.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = JAProgressBar.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		96D0EFED1EC82B61002A8A17 /* JAProgressBar.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = JAProgressBar.h; sourceTree = "<group>"; };
+		96D0EFF61EC82C12002A8A17 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = Framework/Info.plist; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		96D0EFE61EC82B61002A8A17 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		96D0EFE01EC82B61002A8A17 = {
+			isa = PBXGroup;
+			children = (
+				96D0EFEC1EC82B61002A8A17 /* JAProgressBar */,
+				96D0EFF51EC82B6F002A8A17 /* Supporting Files */,
+				96D0EFEB1EC82B61002A8A17 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		96D0EFEB1EC82B61002A8A17 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				96D0EFEA1EC82B61002A8A17 /* JAProgressBar.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		96D0EFEC1EC82B61002A8A17 /* JAProgressBar */ = {
+			isa = PBXGroup;
+			children = (
+				96166A691EE820ED00A6B45B /* JAProgressBarLayer.h */,
+				96166A6A1EE820ED00A6B45B /* JAProgressBarLayer.m */,
+				96166A6B1EE820ED00A6B45B /* JAProgressUIWebView.h */,
+				96166A6C1EE820ED00A6B45B /* JAProgressUIWebView.m */,
+				96166A6D1EE820ED00A6B45B /* JAProgressView.h */,
+				96166A6E1EE820ED00A6B45B /* JAProgressView.m */,
+				96166A6F1EE820ED00A6B45B /* JAProgressWKWebView.h */,
+				96166A701EE820ED00A6B45B /* JAProgressWKWebView.m */,
+			);
+			path = JAProgressBar;
+			sourceTree = "<group>";
+		};
+		96D0EFF51EC82B6F002A8A17 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				96D0EFED1EC82B61002A8A17 /* JAProgressBar.h */,
+				96D0EFF61EC82C12002A8A17 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			path = JAProgressBar;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		96D0EFE71EC82B61002A8A17 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96166A711EE820ED00A6B45B /* JAProgressBarLayer.h in Headers */,
+				96166A751EE820ED00A6B45B /* JAProgressView.h in Headers */,
+				96166A771EE820ED00A6B45B /* JAProgressWKWebView.h in Headers */,
+				96D0EFEF1EC82B61002A8A17 /* JAProgressBar.h in Headers */,
+				96166A731EE820ED00A6B45B /* JAProgressUIWebView.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		96D0EFE91EC82B61002A8A17 /* JAProgressBar */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 96D0EFF21EC82B61002A8A17 /* Build configuration list for PBXNativeTarget "JAProgressBar" */;
+			buildPhases = (
+				96D0EFE51EC82B61002A8A17 /* Sources */,
+				96D0EFE61EC82B61002A8A17 /* Frameworks */,
+				96D0EFE71EC82B61002A8A17 /* Headers */,
+				96D0EFE81EC82B61002A8A17 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = JAProgressBar;
+			productName = JAProgressBar;
+			productReference = 96D0EFEA1EC82B61002A8A17 /* JAProgressBar.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		96D0EFE11EC82B61002A8A17 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0830;
+				ORGANIZATIONNAME = Jason;
+				TargetAttributes = {
+					96D0EFE91EC82B61002A8A17 = {
+						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = ZEY359R7A4;
+						ProvisioningStyle = Automatic;
+					};
+				};
+			};
+			buildConfigurationList = 96D0EFE41EC82B61002A8A17 /* Build configuration list for PBXProject "JAProgressBar" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 96D0EFE01EC82B61002A8A17;
+			productRefGroup = 96D0EFEB1EC82B61002A8A17 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				96D0EFE91EC82B61002A8A17 /* JAProgressBar */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		96D0EFE81EC82B61002A8A17 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96D0EFF71EC82C12002A8A17 /* Info.plist in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		96D0EFE51EC82B61002A8A17 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				96166A761EE820ED00A6B45B /* JAProgressView.m in Sources */,
+				96166A721EE820ED00A6B45B /* JAProgressBarLayer.m in Sources */,
+				96166A741EE820ED00A6B45B /* JAProgressUIWebView.m in Sources */,
+				96166A781EE820ED00A6B45B /* JAProgressWKWebView.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		96D0EFF01EC82B61002A8A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		96D0EFF11EC82B61002A8A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		96D0EFF31EC82B61002A8A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZEY359R7A4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coder.JAProgressBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		96D0EFF41EC82B61002A8A17 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ALLOW_NON_MODULAR_INCLUDES_IN_FRAMEWORK_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				DEFINES_MODULE = YES;
+				DEVELOPMENT_TEAM = ZEY359R7A4;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "$(SRCROOT)/Framework/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_BUNDLE_IDENTIFIER = com.coder.JAProgressBar;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		96D0EFE41EC82B61002A8A17 /* Build configuration list for PBXProject "JAProgressBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96D0EFF01EC82B61002A8A17 /* Debug */,
+				96D0EFF11EC82B61002A8A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		96D0EFF21EC82B61002A8A17 /* Build configuration list for PBXNativeTarget "JAProgressBar" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				96D0EFF31EC82B61002A8A17 /* Debug */,
+				96D0EFF41EC82B61002A8A17 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 96D0EFE11EC82B61002A8A17 /* Project object */;
+}

@@ -125,7 +125,7 @@ NSString *kAFJAReceiveResponseNotification = @"kAFJAReceiveResponseNotification"
             Method originalMethod = class_getInstanceMethod([delegate class], @selector(URLSession:dataTask:didReceiveData:));
             Method swizzledMethod = class_getInstanceMethod([self class], @selector(ja_URLSession:dataTask:didReceiveData:));
 
-#warning Keep attention
+            // Keep attention
             // 替换 id<NSURLSessionDataDelegate> 对象的类中的 ``URLSession:dataTask:didReceiveData:`` 方法的实现
             // 整段代码相当于给 id<NSURLSessionDataDelegate> 对象的类添加一个新方法 ``ja_URLSession:dataTask:didReceiveData:，
             // 然后用新添加的方法与原方法的实现进行交换操作
