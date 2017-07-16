@@ -27,7 +27,8 @@
     _webView.delegate = self;
     
     [self.view addSubview:_webView];
-    [self.navigationController.navigationBar addSubview:_webView.progressView];
+        
+    // [self.navigationController.navigationBar addSubview:_webView.progressView];
 }
 
 - (void)viewWillAppear:(BOOL)animated {
