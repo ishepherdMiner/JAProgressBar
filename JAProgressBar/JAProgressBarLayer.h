@@ -16,8 +16,6 @@ UIKIT_EXTERN NSString *JAkEstimatedProgress;
 @interface JAProgressBarLayer : CAShapeLayer
 
 - (void)flush:(CGFloat)progress;
-- (void)finish;
-- (void)fail;
 
 @end
 

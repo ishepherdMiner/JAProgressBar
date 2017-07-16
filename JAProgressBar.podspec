@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "JAProgressBar"
-  s.version      = "0.0.1"
+  s.version      = "0.0.3"
   s.summary      = "A progress bar that track the network request"
   s.description  = <<-DESC
   A progress bar that track the network request.

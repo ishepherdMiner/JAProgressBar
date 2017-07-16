@@ -11,6 +11,7 @@
 NSString *JAkEstimatedProgress = @"estimatedProgress";
 
 @implementation JAProgressBarLayer
+
 - (instancetype)init {
     if (self = [super init]) {
         self.lineWidth = 3;
@@ -27,27 +28,19 @@ NSString *JAkEstimatedProgress = @"estimatedProgress";
 }
 
 - (void)flush:(CGFloat)progress {
-    dispatch_async(dispatch_get_main_queue(), ^{        
+    if (progress < 1 && progress > 0) {
+        dispatch_async(dispatch_get_main_queue(), ^{
+            self.strokeEnd = progress;
+        });
+    }else {
         self.strokeEnd = progress;
-        if (self.strokeEnd == 1) {
-            [self finish];
-        }
-    });
+        dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{            
+            if (progress == 1) {
+                self.hidden = true;
+                [self removeFromSuperlayer];
+            }
+        });
+    }
 }
 
-- (void)finish {
-    self.strokeEnd = 1.0;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            self.hidden = true;
-            [self removeFromSuperlayer];
-    });
-}
-
-- (void)fail {
-    self.strokeEnd = 0.0;
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.25 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-        self.hidden = true;
-        [self removeFromSuperlayer];
-    });
-}
 @end
