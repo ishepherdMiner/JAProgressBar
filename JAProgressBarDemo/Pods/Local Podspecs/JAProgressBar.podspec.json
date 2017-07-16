@@ -1,6 +1,6 @@
 {
   "name": "JAProgressBar",
-  "version": "0.0.1",
+  "version": "0.0.3",
   "summary": "A progress bar that track the network request",
   "description": "A progress bar that track the network request.\nSupports WKWebView, UIWebView and NSURLSession",
   "homepage": "https://github.com/ishepherdMiner/JAProgressBar",
@@ -13,7 +13,7 @@
   },
   "source": {
     "git": "https://github.com/ishepherdMiner/JAProgressBar.git",
-    "tag": "0.0.1"
+    "tag": "0.0.3"
   },
   "source_files": [
     "JAProgressBar",
@@ -26,6 +26,7 @@
     "Foundation"
   ],
   "requires_arc": true,
+  "module_name": "JAProgressBar",
   "dependencies": {
     "AFNetworking": [
 

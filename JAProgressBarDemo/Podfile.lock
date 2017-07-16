@@ -14,7 +14,7 @@ PODS:
   - AFNetworking/Serialization (3.1.0)
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
-  - JAProgressBar (0.0.1):
+  - JAProgressBar (0.0.3):
     - AFNetworking
 
 DEPENDENCIES:
@@ -27,8 +27,8 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
-  JAProgressBar: 7b035af09e1ec3607deb0c811e80ee045d4300b4
+  JAProgressBar: 1a1b9ed6bb3ab34614abe44d84c67b5c3e92583f
 
 PODFILE CHECKSUM: 5bf2fca8f328a0f17781b14d0af24be3086e35fe
 
-COCOAPODS: 1.2.0
+COCOAPODS: 1.2.1

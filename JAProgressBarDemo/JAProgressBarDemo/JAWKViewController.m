@@ -8,6 +8,7 @@
 
 #import "JAWKViewController.h"
 #import <JAProgressBar.h>
+#import <WebKit/WebKit.h>
 
 @interface JAWKViewController () <WKNavigationDelegate>
 
