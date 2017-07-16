@@ -6,18 +6,11 @@
 //  Copyright © 2017 Jason. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-#import <UIKit/UIKit.h>
-#import "JAProgressBarLayer.h"
+#import "JAProgressView.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
-@protocol JAProgressViewDelegate;
-@class JAProgressView;
-
 @interface JAProgressUIWebView : UIWebView <JAProgressViewDelegate>
-
-@interface JAProgressUIWebView : UIWebView
 
 @property (nonatomic,assign,readonly) long long expectedContentLength;
 @property (nonatomic,strong,readonly) JAProgressView *progressView;
