@@ -7,7 +7,6 @@
 //
 
 #import "JAProgressWKWebView.h"
-#import "JAProgressView.h"
 
 @interface JAProgressWKWebView ()
 

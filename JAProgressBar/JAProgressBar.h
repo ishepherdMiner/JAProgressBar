@@ -13,5 +13,5 @@ FOUNDATION_EXPORT const unsigned char JAProgressBarVersionString[];
 
 #import <JAProgressBar/JAProgressBarLayer.h>
 #import <JAProgressBar/JAProgressView.h>
-#import <JAProgressBar/JAProgressUIWebView.h>
+#import <JAProgressBar/JAProgressUIWebView.h>                       
 #import <JAProgressBar/JAProgressWKWebView.h>

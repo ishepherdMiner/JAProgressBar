@@ -7,7 +7,6 @@
 //
 
 #import "JAProgressUIWebView.h"
-#import "JAProgressView.h"
 #import <objc/message.h>
 
 NSString *kAFJAReceiveDataNotification =  @"kAFNReceiveDataNotification";

@@ -6,10 +6,8 @@
 //  Copyright © 2017 Jason. All rights reserved.
 //
 
-#import <QuartzCore/QuartzCore.h>
-#import <UIKit/UIKit.h>
+#import "JAProgressView.h"
 #import <WebKit/WebKit.h>
-#import "JAProgressBarLayer.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
