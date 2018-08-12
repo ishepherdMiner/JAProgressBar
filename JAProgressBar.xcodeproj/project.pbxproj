@@ -7,13 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		96166A711EE820ED00A6B45B /* JAProgressBarLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A691EE820ED00A6B45B /* JAProgressBarLayer.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96166A711EE820ED00A6B45B /* JAProgressBarLayer.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A691EE820ED00A6B45B /* JAProgressBarLayer.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		96166A721EE820ED00A6B45B /* JAProgressBarLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = 96166A6A1EE820ED00A6B45B /* JAProgressBarLayer.m */; };
-		96166A731EE820ED00A6B45B /* JAProgressUIWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6B1EE820ED00A6B45B /* JAProgressUIWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96166A731EE820ED00A6B45B /* JAProgressUIWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6B1EE820ED00A6B45B /* JAProgressUIWebView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		96166A741EE820ED00A6B45B /* JAProgressUIWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96166A6C1EE820ED00A6B45B /* JAProgressUIWebView.m */; };
-		96166A751EE820ED00A6B45B /* JAProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6D1EE820ED00A6B45B /* JAProgressView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96166A751EE820ED00A6B45B /* JAProgressView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6D1EE820ED00A6B45B /* JAProgressView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		96166A761EE820ED00A6B45B /* JAProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96166A6E1EE820ED00A6B45B /* JAProgressView.m */; };
-		96166A771EE820ED00A6B45B /* JAProgressWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6F1EE820ED00A6B45B /* JAProgressWKWebView.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		96166A771EE820ED00A6B45B /* JAProgressWKWebView.h in Headers */ = {isa = PBXBuildFile; fileRef = 96166A6F1EE820ED00A6B45B /* JAProgressWKWebView.h */; settings = {ATTRIBUTES = (Private, ); }; };
 		96166A781EE820ED00A6B45B /* JAProgressWKWebView.m in Sources */ = {isa = PBXBuildFile; fileRef = 96166A701EE820ED00A6B45B /* JAProgressWKWebView.m */; };
 		96D0EFEF1EC82B61002A8A17 /* JAProgressBar.h in Headers */ = {isa = PBXBuildFile; fileRef = 96D0EFED1EC82B61002A8A17 /* JAProgressBar.h */; settings = {ATTRIBUTES = (Public, ); }; };
 /* End PBXBuildFile section */
@@ -92,10 +92,10 @@
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				96D0EFEF1EC82B61002A8A17 /* JAProgressBar.h in Headers */,
 				96166A711EE820ED00A6B45B /* JAProgressBarLayer.h in Headers */,
 				96166A751EE820ED00A6B45B /* JAProgressView.h in Headers */,
 				96166A771EE820ED00A6B45B /* JAProgressWKWebView.h in Headers */,
-				96D0EFEF1EC82B61002A8A17 /* JAProgressBar.h in Headers */,
 				96166A731EE820ED00A6B45B /* JAProgressUIWebView.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -221,7 +221,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = YES;
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
@@ -267,7 +267,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
